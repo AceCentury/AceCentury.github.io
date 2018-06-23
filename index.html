@@ -135,6 +135,27 @@
                     <div id="project" class="content-box">
                         <div class="box-pad bordered-box">
                         <h1 class="section-title"> Project Showcase</h1>
+                            <div class="project-white">
+                                <h2 class="section-title" style="color: black">Rocket Control/Monitoring Project</h2>
+                                <h5>Programming an on-board computer for a rocket.</h5>
+                                <button class="button button-normal" onclick="EE2024ToggleDetails()" id="EE2024Button">Show More Details</button>
+                                <div id="EE2024Details" style="display: none">
+                                    <li class="generic_li_font">This was done in a pair as part of an Electrical Engineering module in NUS.</li>
+                                    <li class="generic_li_font">The objective was to interface with peripherals in order to create a functional on-board computer for a rocket.</li>
+                                    <li class="generic_li_font">We used an ARM based LPC1769 microcontroller with the LPCXpresso Baseboard.</li>
+                                    <li class="generic_li_font">The detailed objectives and summarised implementations can be found <a href="files/EE2024%20Assignment%202%20Report.pdf" download="Rocket System Report">here</a>.</li>
+                                    <li class="generic_li_font">The source code can be found on my Github repository <a href="https://github.com/AceCentury/EE2024-Assignment-2-Public"> here</a>.</li>
+                                    <br>
+                                    <h5>Below is a video showing some of the features.</h5>
+                                    <h6>Note that this video was taken in the middle of the development cycle and is expected to differ slightly from the report. We were unable to record
+                                    a video of our final product as the OLED display of our final Baseboard (yes, we had to change boards several times
+                                        due to component failures) was too dim for us to record clearly.</h6>
+                                    <video height="auto" controls>
+                                        <source src="videos/EE2024%20Project.mp4">
+                                    </video>
+                                </div>
+                            </div>
+
                             <div class="project-gray">
                             <h2 class="section-title" style="color: black">AB&B</h2>
                             <h5>Address Book application for users to manage their contacts.</h5>
@@ -161,7 +182,7 @@
                                 <br>
                             </div>
                             </div>
-                            <br>
+
                             <div class="project-white">
                                 <h2 class="section-title" style="color: black">Cyber Security Report</h2>
                                 <h5>A group report which aims to identify the major stakeholder in personal data protection.</h5>
@@ -171,8 +192,8 @@
                                     <li class="generic_li_font">The other group members were not pursuing a computing related major.</li>
                                     <li class="generic_li_font">While the exact mark was not released, the report was in the top 25% of the module cohort.</li>
                                     <li class="generic_li_font">The report can be found <a href="files/GET1004%20Report.pdf" download="Cyber Security Report">here</a>.</li>
-                                    <br>
                                 </div>
+                                <br>
                             </div>
                             <div class="project-gray">
                             <h2 class="section-title" style="color: black">Real Time Audio Effects on FPGA</h2>
@@ -207,8 +228,8 @@
                                     <li class="generic_li_font">The report was in the top 25% of the module cohort, scoring 26.3 / 29 marks.</li>
                                     <li class="generic_li_font">The highest mark attained in the cohort was 27.55 marks.</li>
                                     <li class="generic_li_font">The report can be found <a href="files/CG1001%20Report.pdf" download="Social Robots Report">here</a>.</li>
-                                    <br>
                                 </div>
+                                <br>
                             </div>
 
                             <div class="flex">
@@ -352,7 +373,29 @@
                 button.innerHTML = "Show Module Overview";
             }
         }
-        
+
+
+
+        function EE2024ToggleDetails() {
+            var status = document.getElementById("EE2024Details");
+            if (status.style.display == "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeEE2024ButtonText();
+        }
+
+        function changeEE2024ButtonText() {
+            var button = document.getElementById("EE2024Button");
+            if (button.innerHTML == "Show More Details") {
+                button.innerHTML = "Hide Details";
+            }
+            else {
+                button.innerHTML = "Show More Details";
+            }
+        }
+
         function ABToggleDetails() {
             var status = document.getElementById("AB&BDetails");
             if (status.style.display == "none") {
