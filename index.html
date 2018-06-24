@@ -105,8 +105,9 @@
                     </div>
 
                     <div id="teaching" class="content-box box-pad">
-
                         <h1 class="section-title">Teaching Experience</h1>
+
+                        <div class="project-white">
                         <h2>Introduction to Programming with Python and C</h2>
                         <h5>Teaching Assistant @ National University of Singapore | AUG 2017 - DEC 2017</h5>
                         <br>
@@ -129,6 +130,33 @@
                                 It lays the foundation of computing in electrical engineering. Topics include problem solving by computing, writing pseudo-codes, problem formulation and problem solving, program development, coding, testing and debugging,
                                 fundamental programming constructs (variables, types, expressions, assignments, functions, control structures, etc.), fundamental data structures: arrays, strings and structures, simple file processing, visualization,
                                 and basic graphical user interfaces.</h5>
+                        </div>
+                        </div>
+                        <div class="project-gray">
+                            <h2>Temasek Foundation International - NUS STEP Technology Camp</h2>
+                            <h5>Student Mentor | JUN 2018</h5>
+                            <br>
+                            <h5>The objective of this camp is to expose secondary school students to basic programming and engineering skills related to
+                                Electrical and Computer Engineering. It culminates in a mini competition to identify the team which can build the fastest line-tracing robot.</h5>
+                            <br>
+                            <h5>Under my mentorship, NUS High School Team 1 achieved 1<sup>st</sup> Place.</h5>
+                            <br>
+                            <h5>Responsibilities:</h5>
+                            <li class="generic_li_font">Mentor 2 teams of 3 students each</li>
+                            <li class="generic_li_font">Reinforce concepts covered during workshops</li>
+                            <li class="generic_li_font">Guide students in hardware assembly and programming</li>
+                            <br>
+                            <button class="button button-normal" onclick="STEPCampToggleFeedback()" id="STEPCampFeedbackButton">View Student Feedback</button>
+                            <div id="STEPCampFeedback" style="display: none">
+                                <h5><i>I learnt a lot through your patience and clear teaching, helping us understand important and basic concepts.
+                                Even when we created many problems for you, you were still very (very) patient with us and took the effort to help us understand.</i> -Zhi Ying [Temasek JC (IP)]</h5>
+                                <br>
+                                <h5><i>Thanks for being such an amazing mentor. You're super patient even when I really don't understand anything.</i> -Clarice [Temasek JC (IP)]</h5>
+                                <br>
+                                <h5><i>Thank you for helping our group through this camp and being so patient with us even though we kept on asking you for help
+                                and might not understand certain concepts sometimes.</i> -Arielle [Temasek JC (IP)]</h5>
+                            </div>
+
                         </div>
                     </div>
 
@@ -354,6 +382,27 @@
         <!-- Functions -->
 
         <script>
+
+        function STEPCampToggleFeedback() {
+            var status = document.getElementById("STEPCampFeedback");
+            if (status.style.display === "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeSTEPCampButtonText();
+        }
+
+        function changeSTEPCampButtonText() {
+            var button = document.getElementById("STEPCampFeedbackButton");
+            if (button.innerHTML == "View Student Feedback") {
+                button.innerHTML = "Hide Student Feedback";
+            }
+            else {
+                button.innerHTML = "View Student Feedback";
+            }
+        }
+
         function it1007ToggleOverview() {
             var status = document.getElementById("it1007overview");
             if (status.style.display === "none") {
