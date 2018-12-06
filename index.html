@@ -163,6 +163,24 @@
                     <div id="project" class="content-box">
                         <div class="box-pad bordered-box">
                         <h1 class="section-title"> Project Showcase</h1>
+                            <div class="project-gray">
+                                <h2 class="section-title" style="color: black">Dance Detection Wearable</h2>
+                                <h5>Programming a real-time wearable dance detection device.</h5>
+                                <button class="button button-normal" onclick="CG3002ToggleDetails()" id="CG3002Button">Show More Details</button>
+                                <div id="CG3002Details" style="display: none">
+                                    <li class="generic_li_font">This was done in a group of 6 as part of a Computer Engineering module in NUS.</li>
+                                    <li class="generic_li_font">The objective was to design a wearable device from scratch to be worn on a human.</li>
+                                    <li class="generic_li_font">All sensing and computations are done on the wearable.</li>
+                                    <li class="generic_li_font">The wearable will also send data to a remote server.</li>
+                                    <li class="generic_li_font">My main contribution was on software, specifically machine learning to accurately detect the dance moves.</li>
+                                    <br>
+                                    <h5>Below is a video showing our wearable in action during assessment.</h5>
+                                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GIuqDY3armo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <h6>Specific implementations and reports related to this project will not be made publicly available.
+                                        This was a request from the module coordinators.
+                                    </h6>
+                                </div>
+                            </div>
                             <div class="project-white">
                                 <h2 class="section-title" style="color: black">Rocket Control/Monitoring Project</h2>
                                 <h5>Programming an on-board computer for a rocket.</h5>
@@ -423,7 +441,25 @@
             }
         }
 
+        function CG3002ToggleDetails() {
+            var status = document.getElementById("CG3002Details");
+            if (status.style.display == "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeCG3002ButtonText();
+        }
 
+        function changeCG3002ButtonText() {
+            var button = document.getElementById("CG3002Button");
+            if (button.innerHTML == "Show More Details") {
+                button.innerHTML = "Hide Details";
+            }
+            else {
+                button.innerHTML = "Show More Details";
+            }
+        }
 
         function EE2024ToggleDetails() {
             var status = document.getElementById("EE2024Details");
