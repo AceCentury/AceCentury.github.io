@@ -238,8 +238,8 @@
                                     <li class="generic_li_font">The other group members were not pursuing a computing related major.</li>
                                     <li class="generic_li_font">While the exact mark was not released, the report was in the top 25% of the module cohort.</li>
                                     <li class="generic_li_font">The report can be found <a href="files/GET1004%20Report.pdf" download="Cyber Security Report">here</a>.</li>
+                                    <br>
                                 </div>
-                                <br>
                             </div>
                             <div class="project-gray">
                             <h2 class="section-title" style="color: black">Real Time Audio Effects on FPGA</h2>
@@ -274,8 +274,8 @@
                                     <li class="generic_li_font">The report was in the top 25% of the module cohort, scoring 26.3 / 29 marks.</li>
                                     <li class="generic_li_font">The highest mark attained in the cohort was 27.55 marks.</li>
                                     <li class="generic_li_font">The report can be found <a href="files/CG1001%20Report.pdf" download="Social Robots Report">here</a>.</li>
+                                    <br>
                                 </div>
-                                <br>
                             </div>
 
                             <div class="flex">
@@ -448,17 +448,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeCG3002ButtonText();
-        }
-
-        function changeCG3002ButtonText() {
-            var button = document.getElementById("CG3002Button");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("CG3002Button");
         }
 
         function EE2024ToggleDetails() {
@@ -468,17 +458,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeEE2024ButtonText();
-        }
-
-        function changeEE2024ButtonText() {
-            var button = document.getElementById("EE2024Button");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("EE2024Button");
         }
 
         function ABToggleDetails() {
@@ -488,17 +468,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeABButtonText();
-        }
-
-        function changeABButtonText() {
-            var button = document.getElementById("AB&BButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("AB&BButton");
         }
 
         function CyberSecurityToggleDetails() {
@@ -508,17 +478,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeCyberSecurityButtonText();
-        }
-
-        function changeCyberSecurityButtonText() {
-            var button = document.getElementById("CyberSecurityButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("CyberSecurityButton");
         }
 
         function SocialRobotsToggleDetails() {
@@ -528,17 +488,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeSocialRobotsButtonText();
-        }
-
-        function changeSocialRobotsButtonText() {
-            var button = document.getElementById("SocialRobotsButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("SocialRobotsButton");
         }
 
         function ArduinoToggleDetails() {
@@ -551,17 +501,7 @@
                 status.style.display = "none";
                 status2.style.display = "none";
             }
-            changeArduinoTemperatureButtonText();
-        }
-
-        function changeArduinoTemperatureButtonText() {
-            var button = document.getElementById("ArduinoButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("ArduinoButton");
         }
 
         function FPGAToggleDetails() {
@@ -571,11 +511,11 @@
             } else {
                 status.style.display = "none";
             }
-            changeFPGAButtonText();
+            changeDetailsButtonText("FPGAButton");
         }
 
-        function changeFPGAButtonText() {
-            var button = document.getElementById("FPGAButton");
+        function changeDetailsButtonText(buttonID){
+            var button = document.getElementById(buttonID);
             if (button.innerHTML == "Show More Details") {
                 button.innerHTML = "Hide Details";
             }
