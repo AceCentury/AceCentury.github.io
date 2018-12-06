@@ -448,17 +448,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeCG3002ButtonText();
-        }
-
-        function changeCG3002ButtonText() {
-            var button = document.getElementById("CG3002Button");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("CG3002Button");
         }
 
         function EE2024ToggleDetails() {
@@ -468,17 +458,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeEE2024ButtonText();
-        }
-
-        function changeEE2024ButtonText() {
-            var button = document.getElementById("EE2024Button");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("EE2024Button");
         }
 
         function ABToggleDetails() {
@@ -488,17 +468,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeABButtonText();
-        }
-
-        function changeABButtonText() {
-            var button = document.getElementById("AB&BButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("AB&BButton");
         }
 
         function CyberSecurityToggleDetails() {
@@ -508,17 +478,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeCyberSecurityButtonText();
-        }
-
-        function changeCyberSecurityButtonText() {
-            var button = document.getElementById("CyberSecurityButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("CyberSecurityButton");
         }
 
         function SocialRobotsToggleDetails() {
@@ -528,17 +488,7 @@
             } else {
                 status.style.display = "none";
             }
-            changeSocialRobotsButtonText();
-        }
-
-        function changeSocialRobotsButtonText() {
-            var button = document.getElementById("SocialRobotsButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("SocialRobotsButton");
         }
 
         function ArduinoToggleDetails() {
@@ -551,17 +501,7 @@
                 status.style.display = "none";
                 status2.style.display = "none";
             }
-            changeArduinoTemperatureButtonText();
-        }
-
-        function changeArduinoTemperatureButtonText() {
-            var button = document.getElementById("ArduinoButton");
-            if (button.innerHTML == "Show More Details") {
-                button.innerHTML = "Hide Details";
-            }
-            else {
-                button.innerHTML = "Show More Details";
-            }
+            changeDetailsButtonText("ArduinoButton");
         }
 
         function FPGAToggleDetails() {
@@ -571,11 +511,11 @@
             } else {
                 status.style.display = "none";
             }
-            changeFPGAButtonText();
+            changeDetailsButtonText("FPGAButton");
         }
 
-        function changeFPGAButtonText() {
-            var button = document.getElementById("FPGAButton");
+        function changeDetailsButtonText(buttonID){
+            var button = document.getElementById(buttonID);
             if (button.innerHTML == "Show More Details") {
                 button.innerHTML = "Hide Details";
             }
