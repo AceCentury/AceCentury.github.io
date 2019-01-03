@@ -120,6 +120,16 @@
                             <li class="generic_li_font">Strengthen key software engineering concepts covered in lectures to ensure clear comprehension of content</li>
                             <li class="generic_li_font">Evaluate my teams' ability to implement software engineering techniques</li>
                             <br>
+                            <button class="button button-normal" onclick="cs2103ToggleOverview()" id="cs2103OverviewButton">Show Module Overview</button>
+                            <div id="cs2103overview" style="display: none">
+                                <h5>This module introduces the necessary conceptual and analytical tools for systematic and rigorous development of
+                                    software systems. It covers four main areas of software development, namely object-oriented system analysis,
+                                    object-oriented system modelling and design, implementation, and testing, with emphasis on system modelling and
+                                    design and implementation of software modules that work cooperatively to fulfill the requirements of the system.
+                                    Tools and techniques for software development, such as Unified Modelling Language (UML), program specification,
+                                    and testing methods, will be taught. Major software engineering issues such as modularisation criteria, program
+                                    correctness, and software quality will also be covered.</h5>
+                            </div>
                         </div>
 
                         <div class="project-white">
@@ -436,6 +446,16 @@
             }
         }
 
+        function cs2103ToggleOverview() {
+            var status = document.getElementById("cs2103overview");
+            if (status.style.display === "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeModuleOverviewButtonText("cs2103OverviewButton");
+        }
+
         function it1007ToggleOverview() {
             var status = document.getElementById("it1007overview");
             if (status.style.display === "none") {
@@ -443,11 +463,11 @@
             } else {
                 status.style.display = "none";
             }
-            changeIt1007ButtonText();
+            changeModuleOverviewButtonText("it1007OverviewButton");
         }
 
-        function changeIt1007ButtonText() {
-            var button = document.getElementById("it1007OverviewButton");
+        function changeModuleOverviewButtonText(buttonID) {
+            var button = document.getElementById(buttonID);
             if (button.innerHTML == "Show Module Overview") {
                 button.innerHTML = "Hide Module Overview";
             }
