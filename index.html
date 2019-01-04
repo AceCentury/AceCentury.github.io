@@ -107,6 +107,34 @@
                     <div id="teaching" class="content-box box-pad">
                         <h1 class="section-title">Teaching Experience</h1>
 
+                        <div class="project-gray">
+                            <h2>Software Engineering</h2>
+                            <h5>Teaching Assistant @ National University of Singapore | AUG 2018 - DEC 2018</h5>
+                            <br>
+                            <div>
+                                <h5>Teacher Rating: 4.5 / 5</h5>
+                                <h6>The detailed teacher report can be downloaded
+                                    <a href="files/cs2103-1819s1-report.pdf">
+                                        here</a>.</h6>
+                            </div>
+                            <br>
+                            <h5>Responsibilities:</h5>
+                            <li class="generic_li_font">Supervise 2 teams of 5 undergraduates undergoing a software engineering module</li>
+                            <li class="generic_li_font">Strengthen key software engineering concepts covered in lectures to ensure clear comprehension of content</li>
+                            <li class="generic_li_font">Evaluate my teams' ability to implement software engineering techniques</li>
+                            <br>
+                            <button class="button button-normal" onclick="cs2103ToggleOverview()" id="cs2103OverviewButton">Show Module Overview</button>
+                            <div id="cs2103overview" style="display: none">
+                                <h5>This module introduces the necessary conceptual and analytical tools for systematic and rigorous development of
+                                    software systems. It covers four main areas of software development, namely object-oriented system analysis,
+                                    object-oriented system modelling and design, implementation, and testing, with emphasis on system modelling and
+                                    design and implementation of software modules that work cooperatively to fulfill the requirements of the system.
+                                    Tools and techniques for software development, such as Unified Modelling Language (UML), program specification,
+                                    and testing methods, will be taught. Major software engineering issues such as modularisation criteria, program
+                                    correctness, and software quality will also be covered.</h5>
+                            </div>
+                        </div>
+
                         <div class="project-white">
                         <h2>Introduction to Programming with Python and C</h2>
                         <h5>Teaching Assistant @ National University of Singapore | AUG 2017 - DEC 2017</h5>
@@ -421,6 +449,16 @@
             }
         }
 
+        function cs2103ToggleOverview() {
+            var status = document.getElementById("cs2103overview");
+            if (status.style.display === "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeModuleOverviewButtonText("cs2103OverviewButton");
+        }
+
         function it1007ToggleOverview() {
             var status = document.getElementById("it1007overview");
             if (status.style.display === "none") {
@@ -428,11 +466,11 @@
             } else {
                 status.style.display = "none";
             }
-            changeIt1007ButtonText();
+            changeModuleOverviewButtonText("it1007OverviewButton");
         }
 
-        function changeIt1007ButtonText() {
-            var button = document.getElementById("it1007OverviewButton");
+        function changeModuleOverviewButtonText(buttonID) {
+            var button = document.getElementById(buttonID);
             if (button.innerHTML == "Show Module Overview") {
                 button.innerHTML = "Hide Module Overview";
             }
