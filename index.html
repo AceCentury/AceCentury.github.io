@@ -112,6 +112,32 @@
                         <h1 class="section-title">Teaching Experience</h1>
 
                         <div class="project-gray">
+                            <h2>Programming Methodology</h2>
+                            <h5>Teaching Assistant @ National University of Singapore | AUG 2019 - DEC 2019</h5>
+                            <br>
+                            <div>
+                                <h5>Pending release of teaching feedback.</h5>
+                            </div>
+                            <br>
+                            <h5>Responsibilities:</h5>
+                            <li class="generic_li_font">Conducting tutorial lessons</li>
+                            <li class="generic_li_font">Grading assignments</li>
+                            <li class="generic_li_font">Chief Invigilator for Practical Examinations</li>
+                            <br>
+                            <button class="button button-normal" onclick="cs1010ToggleOverview()" id="cs1010OverviewButton">Show Module Overview</button>
+                            <div id="cs1010overview" style="display: none">
+                                <h5>This module introduces the fundamental concepts of problem solving by computing and
+                                    programming using an imperative programming language. It is the first and foremost
+                                    introductory course to computing. Topics covered include computational thinking and
+                                    computational problem solving, designing and specifying an algorithm, basic problem
+                                    formulation and problem solving approaches, program development, coding, testing and
+                                    debugging, fundamental programming constructs (variables, types, expressions,
+                                    assignments, functions, control structures, etc.), fundamental data structures
+                                    (arrays, strings, composite data types), basic sorting, and recursion.</h5>
+                            </div>
+                        </div>
+
+                        <div class="project-white">
                             <h2>Software Engineering</h2>
                             <h5>Teaching Assistant @ National University of Singapore | AUG 2018 - DEC 2018</h5>
                             <br>
@@ -139,7 +165,7 @@
                             </div>
                         </div>
 
-                        <div class="project-white">
+                        <div class="project-gray">
                         <h2>Introduction to Programming with Python and C</h2>
                         <h5>Teaching Assistant @ National University of Singapore | AUG 2017 - DEC 2017</h5>
                         <br>
@@ -164,6 +190,24 @@
                                 and basic graphical user interfaces.</h5>
                         </div>
                         </div>
+
+                        <div class="project-white">
+                            <h2>Temasek Foundation International - NUS STEP Technology Camp</h2>
+                            <h5>Student Mentor | JUN 2018</h5>
+                            <br>
+                            <h5>The objective of this camp is to expose secondary school students to basic programming and engineering skills related to
+                                Electrical and Computer Engineering. It culminates in a mini competition to identify the team which can build the fastest maze-navigation robot.</h5>
+                            <br>
+                            <h5>Under my mentorship, 1 team achieved the Merit award.</h5>
+                            <br>
+                            <h5>Responsibilities:</h5>
+                            <li class="generic_li_font">Mentor 2 teams of 4 students each</li>
+                            <li class="generic_li_font">Reinforce concepts covered during workshops</li>
+                            <li class="generic_li_font">Guide students in hardware assembly and programming</li>
+                            <li class="generic_li_font">Introduce the basics of machine learning</li>
+                        </div>
+
+
                         <div class="project-gray">
                             <h2>Temasek Foundation International - NUS STEP Technology Camp</h2>
                             <h5>Student Mentor | JUN 2018</h5>
@@ -451,6 +495,16 @@
             else {
                 button.innerHTML = "View Student Feedback";
             }
+        }
+
+        function cs1010ToggleOverview() {
+            var status = document.getElementById("cs1010overview");
+            if (status.style.display === "none") {
+                status.style.display = "block";
+            } else {
+                status.style.display = "none";
+            }
+            changeModuleOverviewButtonText("cs1010OverviewButton");
         }
 
         function cs2103ToggleOverview() {
